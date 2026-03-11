@@ -47,20 +47,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  will-change: transform;
 }
 
 #enable {
   position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  padding: 12px 20px;
-  font-size: 16px;
-
-  background: white;
-  border: none;
-  border-radius: 10px;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
 }
 
 #img_1 {

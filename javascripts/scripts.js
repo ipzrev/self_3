@@ -1,22 +1,17 @@
-const button = document.getElementById("enable");
+function startParallax() {
+  const layers = document.querySelectorAll(".layer");
 
-button.addEventListener("click", async () => {
-  if (
-    typeof DeviceOrientationEvent !== "undefined" &&
-    typeof DeviceOrientationEvent.requestPermission === "function"
-  ) {
-    try {
-      const permission = await DeviceOrientationEvent.requestPermission();
+  window.addEventListener("deviceorientation", (event) => {
+    const x = event.gamma; // наклон влево/вправо
+    const y = event.beta; // наклон вперед/назад
 
-      if (permission === "granted") {
-        startParallax();
-        button.style.display = "none";
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  } else {
-    startParallax();
-    button.style.display = "none";
-  }
-});
+    layers.forEach((layer) => {
+      const depth = layer.getAttribute("data-depth");
+
+      const moveX = x * depth * 0.2;
+      const moveY = y * depth * 0.2;
+
+      layer.style.transform = `translate(-50%, -50%) translate(${moveX}px, ${moveY}px)`;
+    });
+  });
+}
