@@ -8,18 +8,15 @@
   </head>
 
   <body>
-    <!-- Первая секция с параллаксом -->
-    <!-- <section class="section_1">
-      <div class="main_div div_1">Просто текст</div>
-      <div class="main_div div_2">Просто текст</div>
-    </section>
-
-    <section class="section_2">
-      <div class="main_div div_1">Просто текст</div>
-      <div class="main_div div_2">Просто текст</div>
-    </section> -->
-    -
     <button id="enable">Enable Gyroscope</button>
+
+    <div class="scene">
+      <img src="img/кот.png" class="layer" data-depth="5" />
+
+      <img src="img/павер.png" class="layer" data-depth="15" />
+
+      <img src="img/подписи.png" class="layer" data-depth="30" />
+    </div>
 
     <script>
       const button = document.getElementById("enable");
@@ -34,17 +31,7 @@
         }
       });
     </script>
-    <div class="scene">
-      <!-- дальний слой -->
-      <img src="img/кот.png" class="layer" data-depth="5" />
 
-      <!-- средний слой -->
-      <img src="img/павер.png" class="layer" data-depth="15" />
-
-      <!-- передний слой -->
-      <img src="img/подписи.png" class="layer" data-depth="30" />
-    </div>
-    -
     <script src="script.js"></script>
   </body>
 </html>
