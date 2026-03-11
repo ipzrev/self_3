@@ -1,0 +1,69 @@
+/* .main_div {
+  height: 200px;
+  width: 200px;
+}
+
+.div_1 {
+  background-color: aqua;
+}
+
+.div_2 {
+  background-color: aquamarine;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+.section_1 {
+  width: 800px;
+  height: 800px;
+  background-color: blueviolet;
+}
+
+.section_2 {
+  width: 800px;
+  height: 800px;
+  background-color: rgb(189, 119, 255);
+} */
+
+body {
+  margin: 0;
+  width: 390px;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+.scene {
+  position: relative;
+  width: 390px;
+  height: 100vh;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  will-change: transform;
+
+  max-width: 120%;
+}
+
+#enable {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 12px 20px;
+  font-size: 16px;
+
+  background: white;
+  border: none;
+  border-radius: 10px;
+}
