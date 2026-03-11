@@ -20,5 +20,9 @@
 }
 
 body {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(99, 61, 110);
+}
+
+.scene {
+  pointer-events: none;
 }
