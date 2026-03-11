@@ -19,13 +19,21 @@
       <div class="main_div div_2">Просто текст</div>
     </section> -->
     -
-    <div class="scene">
-      <img src="img/кот.png" class="layer" data-depth="5" />
-      <img src="img/павер.png" class="layer" data-depth="15" />
-      <img src="img/подписи.png" class="layer" data-depth="30" />
-    </div>
+    <button id="enable">Enable Gyroscope</button>
 
-    <button id="enable">Включить 3D</button>
+    <script>
+      const button = document.getElementById("enable");
+
+      button.addEventListener("click", async () => {
+        if (typeof DeviceOrientationEvent.requestPermission === "function") {
+          const permission = await DeviceOrientationEvent.requestPermission();
+
+          alert(permission);
+        } else {
+          alert("sensor works automatically");
+        }
+      });
+    </script>
     -
     <script src="script.js"></script>
   </body>
