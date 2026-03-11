@@ -1,8 +1,6 @@
 const button = document.getElementById("enable");
 
-button.addEventListener("click", requestGyro);
-
-async function requestGyro() {
+button.addEventListener("click", async () => {
   if (
     typeof DeviceOrientationEvent !== "undefined" &&
     typeof DeviceOrientationEvent.requestPermission === "function"
@@ -17,7 +15,7 @@ async function requestGyro() {
     startParallax();
     button.style.display = "none";
   }
-}
+});
 
 function startParallax() {
   const layers = document.querySelectorAll(".layer");
